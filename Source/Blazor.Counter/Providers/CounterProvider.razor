@@ -1,0 +1,15 @@
+<CascadingValue Value="CounterActions">
+    <CascadingValue Value="State">
+        @ChildContent
+    </CascadingValue>
+</CascadingValue>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Inject]
+    public CounterState State { get; set; } = null!;
+    [Inject]
+    public CounterActions CounterActions { get; set; } = null!;
+}
